@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+set timeout 30;
+set ip [lindex $argv 0 ]
+set psw [lindex $argv 1 ]
+set timeout 20
+
+spawn ssh-copy-id $ip ;
+expect {
+    *(yes/no)?* {send yes\r;exp_continue;}
+    *assword:* {send $psw\r;exp_continue;}
+ }
+#expect eof;
+catch wait result;
+exit [lindex $result 3];
