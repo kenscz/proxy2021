@@ -25,7 +25,7 @@ fi
 
 #######################
 cd $(dirname $0)
-yum install wget vim dos2unix epel-release expect -y
+yum install wget vim dos2unix epel-release expect screen -y
 yum install ansible -y
 
 echo 'deprecation_warnings=False' >> /etc/ansible/ansible.cfg
