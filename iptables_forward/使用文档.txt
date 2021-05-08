@@ -1,3 +1,7 @@
+第一步、下载脚本：
+wget -N --no-check-certificate https://raw.githubusercontent.com/kenscz/proxy2021/main/iptables_forward/iptables-pf-params.sh
+
+第二步、运行脚本：
 示例：
 （1）安装iptables：
 bash iptables-pf-params.sh 1
